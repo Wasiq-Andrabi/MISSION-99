@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission 99 | Premium Coaching Institute</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for premium typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 900: '#111827', 600: '#2563eb', 500: '#3b82f6' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom glass effect for the pinned header */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- 1. PINNED STATIC HEADER -->
+    <header class="glass-header fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 text-2xl font-bold tracking-tight text-brand-900">
+                <span class="bg-brand-900 text-white px-2 py-1 rounded">MISSION</span>
+                <span class="text-brand-600">99</span>
+            </a>
+            <nav class="hidden md:flex gap-8 font-medium text-gray-600">
+                <a href="#courses" class="hover:text-brand-600 transition">Courses</a>
+                <a href="#method" class="hover:text-brand-600 transition">Methodology</a>
+                <a href="#admissions" class="hover:text-brand-600 transition">Admissions</a>
+            </nav>
+            <a href="#admissions" class="hidden md:inline-block bg-brand-900 text-white px-6 py-2.5 rounded-full font-medium hover:bg-brand-600 transition shadow-lg shadow-brand-900/20">
+                Apply Now
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <main class="pt-32 pb-16 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
+            <div class="space-y-8 animate-fade-in-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-brand-600 text-sm font-semibold border border-blue-100">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
+                    </span>
+                    Admissions Open for 2027 Session
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight text-brand-900 tracking-tight">
+                    Disciplined Learning.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Brighter Tomorrow.</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-lg leading-relaxed">
+                    Competitive-exam preparation starting in Class 6th. We build strong concepts, confidence, and clarity for school, board exams, and beyond.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#admissions" class="bg-brand-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-700 transition shadow-xl shadow-brand-600/30">
+                        Secure Your Seat
+                    </a>
+                </div>
+                <div class="flex items-center gap-6 text-sm text-gray-500 pt-4 font-medium">
+                    <span class="flex items-center gap-2">✓ Classes 6th-10th</span>
+                    <span class="flex items-center gap-2">✓ 11th & 12th Arts</span>
+                </div>
+            </div>
+            
+            <!-- Hero Graphic Placeholder (Cinematic/Premium Vibe) -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[500px] bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Students studying" class="object-cover w-full h-full opacity-90">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-900/80 to-transparent"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <p class="text-2xl font-bold">Near General Bus Stand</p>
+                    <p class="text-gray-300">Parimpora, Srinagar</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. FLOATING ACTION BUTTONS (Map & WhatsApp pinned bottom right) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+        
+        <!-- Google Maps Button -->
+        <a href="https://maps.app.goo.gl/QwJfC9DDgWj7gCSj6" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100"
+           aria-label="Find us on Google Maps">
+            <!-- Map SVG Icon -->
+            <svg class="w-7 h-7 text-red-500 group-hover:text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+        </a>
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/919186190332?text=Hello%20Mission%2099%2C%20I%20want%20to%20inquire%20about%20admissions%20for%202027%20session" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-xl shadow-green-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+           aria-label="Chat on WhatsApp">
+            <!-- WhatsApp SVG Icon -->
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 21.922c-1.603 0-3.176-.42-4.563-1.216l-5.047 1.324 1.352-4.912c-.87-1.422-1.332-3.048-1.332-4.717 0-4.922 4.02-8.942 8.95-8.942 2.386 0 4.63.928 6.315 2.613 1.685 1.685 2.614 3.927 2.614 6.314 0 4.92-4.02 8.942-8.95 8.942zm-5.464-3.66c.112.063.224.116.335.174 1.256.657 2.673 1.002 4.132 1.002 4.048 0 7.34-3.292 7.34-7.34 0-1.962-.765-3.805-2.15-5.192C14.836 5.518 12.99 4.75 11.026 4.75c-4.045 0-7.338 3.29-7.338 7.338 0 1.54.408 3.036 1.18 4.33l.187.31-1.074 3.9 4.024-1.05zm7.342-5.442c-.412-.206-2.435-1.202-2.813-1.34-.378-.138-.654-.206-.93.206-.276.412-1.066 1.34-1.306 1.616-.24.276-.48.31-.892.104-2.11-.98-3.486-2.675-4.135-3.802-.138-.24.138-.236.545-.98.138-.24.068-.448-.034-.654-.103-.206-.93-2.242-1.275-3.068-.334-.8-.675-.69-.93-.702l-.795-.012c-.276 0-.724.103-1.102.516-.38.414-1.447 1.413-1.447 3.447s1.482 4.004 1.688 4.28c.206.276 2.923 4.464 7.077 6.257 2.454 1.055 3.328 1.144 3.945 1.077.707-.078 2.435-.995 2.78-1.96.344-.964.344-1.792.24-1.96-.103-.168-.38-.272-.793-.478z"/>
+            </svg>
+        </a>
+    </div>
+
+</body>
+</html>
