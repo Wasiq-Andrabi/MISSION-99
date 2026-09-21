@@ -6,27 +6,37 @@
     <title>Mission 99 | Disciplined Learning for a Brighter Tomorrow</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Editorial Typography: Cormorant Garamond for cinematic headers, Inter for UI -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        editorial: ['Cormorant Garamond', 'serif']
+                    },
                     colors: {
                         brand: { 
-                            navy: '#0a1d56',   /* Matches Logo Dark Blue */
-                            gold: '#ffb900',   /* Matches Logo Yellow/Gold */
-                            light: '#f8fafc' 
+                            navy: '#050b14',     /* Deep cinematic navy */
+                            gold: '#D4AF37',     /* Premium metallic gold */
+                            muted: '#8C92A1',
+                            surface: '#F9F9F9'
                         }
                     },
                     animation: {
-                        'marquee': 'marquee 25s linear infinite',
+                        'marquee': 'marquee 40s linear infinite',
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
                     },
                     keyframes: {
                         marquee: {
                             '0%': { transform: 'translateX(0%)' },
                             '100%': { transform: 'translateX(-100%)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
                 }
@@ -34,182 +44,202 @@
         }
     </script>
     <style>
-        .glass-header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(10, 29, 86, 0.1);
+        body { background-color: #F9F9F9; }
+        .glass-nav {
+            background: rgba(5, 11, 20, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        /* Hide scrollbar for ticker */
+        /* Hide scrollbar but keep functionality */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Subtle image zoom on hover for premium feel */
+        .hover-zoom-img { transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .group:hover .hover-zoom-img { transform: scale(1.03); }
     </style>
 </head>
-<body class="bg-brand-light text-gray-800 font-sans antialiased">
+<body class="text-brand-navy font-sans antialiased selection:bg-brand-gold selection:text-brand-navy">
 
-    <!-- ANNOUNCEMENT BAR (Original Site Top Bar) -->
-    <div class="bg-brand-navy text-white text-xs md:text-sm font-medium py-2 px-4 text-center">
-        <ul class="flex flex-wrap justify-center gap-x-6 gap-y-1 max-w-7xl mx-auto">
-            <li class="flex items-center gap-2"><span class="text-brand-gold">•</span> Admissions open for Classes 6th to 10th</li>
-            <li class="flex items-center gap-2"><span class="text-brand-gold">•</span> Class 11th & 12th Arts batches enrolling now</li>
-            <li class="flex items-center gap-2"><span class="text-brand-gold">•</span> Near General Bus Stand, Parimpora, Srinagar</li>
-            <li class="flex items-center gap-2"><span class="text-brand-gold">•</span> Serving students since 2025</li>
-        </ul>
+    <!-- MINIMAL ANNOUNCEMENT BAR -->
+    <div class="bg-black text-brand-muted text-xs tracking-widest uppercase py-2 px-6 border-b border-white/10 z-50 relative">
+        <div class="max-w-screen-2xl mx-auto flex overflow-hidden whitespace-nowrap">
+            <ul class="flex animate-marquee gap-12 items-center">
+                <li>Admissions open for Classes 6th to 10th</li>
+                <li><span class="text-brand-gold mr-3">✦</span> Class 11th & 12th Arts batches enrolling now</li>
+                <li><span class="text-brand-gold mr-3">✦</span> Near General Bus Stand, Parimpora, Srinagar</li>
+                <li><span class="text-brand-gold mr-3">✦</span> Serving students since 2025</li>
+                <!-- Duplicated for seamless loop -->
+                <li><span class="text-brand-gold mr-3">✦</span> Admissions open for Classes 6th to 10th</li>
+                <li><span class="text-brand-gold mr-3">✦</span> Class 11th & 12th Arts batches enrolling now</li>
+                <li><span class="text-brand-gold mr-3">✦</span> Near General Bus Stand, Parimpora, Srinagar</li>
+                <li><span class="text-brand-gold mr-3">✦</span> Serving students since 2025</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- PINNED HEADER WITH LOGO -->
-    <header class="glass-header fixed top-[auto] w-full z-50 transition-all duration-300 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
+    <!-- CINEMATIC NAVIGATION -->
+    <header class="glass-nav fixed top-[32px] w-full z-50 transition-all duration-500">
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
             
-            <!-- Logo Theme -->
-            <a href="/" class="flex items-center gap-3">
-                <img src="file_00000000ec64820b87c8ab099b158257.png" alt="Mission 99 Logo" class="h-14 w-auto object-contain">
-                <div class="hidden sm:block">
-                    <span class="block text-xl font-extrabold text-brand-navy tracking-tight leading-none uppercase">Mission 99</span>
-                    <span class="block text-[0.65rem] font-bold text-brand-gold tracking-widest uppercase mt-0.5">Focus | Prepare | Achieve</span>
+            <!-- Logo Pulled from GitHub URL -->
+            <a href="/" class="flex items-center gap-4 group">
+                <img src="https://raw.githubusercontent.com/Wasiq-Andrabi/MISSION-99/main/file_00000000ec64820b87c8ab099b158257.png" alt="Mission 99" class="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                <div class="hidden sm:block text-white">
+                    <span class="block text-lg font-bold tracking-widest uppercase leading-none">Mission 99</span>
+                    <span class="block text-[0.6rem] font-light tracking-[0.2em] text-brand-gold mt-1 uppercase">Focus | Prepare | Achieve</span>
                 </div>
             </a>
 
-            <!-- Original Nav Links -->
-            <nav class="hidden md:flex gap-6 font-semibold text-brand-navy">
-                <a href="/" class="hover:text-brand-gold transition">Home</a>
-                <a href="/courses/" class="hover:text-brand-gold transition">Courses</a>
-                <a href="/admissions/" class="hover:text-brand-gold transition">Admissions</a>
-                <a href="/about/" class="hover:text-brand-gold transition">About</a>
-                <a href="/contact/" class="hover:text-brand-gold transition">Contact</a>
+            <!-- Corrected Menu Links -->
+            <nav class="hidden md:flex gap-10 text-sm tracking-widest uppercase text-brand-muted">
+                <a href="/" class="hover:text-brand-gold transition-colors duration-300">Home</a>
+                <a href="/courses/" class="hover:text-brand-gold transition-colors duration-300">Courses</a>
+                <a href="/admissions/" class="hover:text-brand-gold transition-colors duration-300">Admissions</a>
+                <a href="/about/" class="hover:text-brand-gold transition-colors duration-300">About</a>
+                <a href="/contact/" class="hover:text-brand-gold transition-colors duration-300">Contact</a>
             </nav>
 
-            <a href="/admissions/" class="bg-brand-navy text-white px-5 py-2.5 rounded-md font-bold hover:bg-brand-gold hover:text-brand-navy transition shadow-md">
-                Apply now
+            <a href="/admissions/" class="hidden md:inline-block border border-brand-gold text-brand-gold px-6 py-2 text-xs tracking-widest uppercase hover:bg-brand-gold hover:text-brand-navy transition-all duration-500">
+                Apply Now
             </a>
         </div>
     </header>
 
-    <!-- HERO SECTION (Original Content, Premium Layout) -->
-    <main class="pt-32 pb-16 px-6 max-w-7xl mx-auto mt-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <div class="flex items-center gap-3">
-                    <span class="bg-brand-gold text-brand-navy text-xs font-bold px-3 py-1 uppercase tracking-wide rounded-full">Admissions open · 2026–27</span>
-                </div>
-                
-                <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight text-brand-navy tracking-tight">
-                    Disciplined Learning for a Brighter <span class="text-brand-gold">Tomorrow</span>
-                </h1>
-                
-                <p class="text-lg text-gray-700 max-w-lg leading-relaxed font-medium">
-                    At Mission 99, students build strong concepts, confidence and clarity — for school, board exams and beyond.
+    <!-- FULL-SCREEN CINEMATIC HERO -->
+    <main class="relative h-screen min-h-[800px] w-full flex items-center bg-brand-navy overflow-hidden">
+        <!-- Background Image (Cinematic Library/Study Aesthetic) -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000" alt="Premium Education" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-brand-navy"></div>
+        </div>
+
+        <!-- Subtle "99" Background Watermark -->
+        <div class="absolute right-0 top-1/2 -translate-y-1/2 text-[30vw] font-editorial font-bold text-white opacity-[0.02] select-none pointer-events-none leading-none">
+            99
+        </div>
+
+        <div class="relative z-10 max-w-screen-2xl mx-auto px-6 lg:px-12 w-full animate-fade-in mt-16">
+            <div class="max-w-3xl">
+                <p class="text-brand-gold tracking-[0.2em] uppercase text-sm mb-6 flex items-center gap-4">
+                    <span class="w-12 h-[1px] bg-brand-gold"></span>
+                    Admissions open · 2026–27
                 </p>
                 
-                <ul class="flex gap-4 text-brand-navy font-bold text-lg">
-                    <li>✓ Class 6th to 10th</li>
-                    <li>✓ 11th & 12th Arts</li>
-                </ul>
+                <h1 class="text-6xl md:text-7xl lg:text-8xl font-editorial text-white leading-[1.05] mb-8">
+                    Disciplined Learning for a <br>
+                    <span class="italic text-brand-gold">Brighter Tomorrow.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-xl mb-12">
+                    At Mission 99, students build strong concepts, confidence and clarity — for school, board exams and beyond.
+                </p>
 
-                <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="/admissions/" class="bg-brand-navy text-white px-8 py-3.5 rounded-md font-bold hover:bg-brand-gold hover:text-brand-navy transition shadow-lg">Apply for admission</a>
-                    <a href="/courses/" class="bg-white border-2 border-brand-navy text-brand-navy px-8 py-3.5 rounded-md font-bold hover:bg-gray-50 transition">View courses</a>
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="/admissions/" class="bg-brand-gold text-brand-navy px-8 py-4 text-sm tracking-widest uppercase font-semibold hover:bg-white transition-colors duration-500">
+                        Apply for admission
+                    </a>
+                    <a href="/courses/" class="text-white border-b border-white/30 pb-1 text-sm tracking-widest uppercase hover:border-brand-gold hover:text-brand-gold transition-colors duration-500">
+                        View courses
+                    </a>
                 </div>
 
-                <div class="pt-6 border-t border-gray-200 grid grid-cols-2 gap-4 text-sm font-semibold text-gray-600">
+                <!-- Hero Meta Data -->
+                <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-8 text-white/60 text-xs tracking-widest uppercase">
                     <div>
-                        <ul class="space-y-1">
-                            <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Free to apply</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✔</span> Call back within one working day</li>
-                        </ul>
+                        <span class="block text-white mb-2">Class 6th – 12th Arts</span>
+                        More than just marks
                     </div>
                     <div>
-                        <p class="flex items-center gap-2"><span class="text-brand-navy">📍</span> Near General Bus Stand, Parimpora</p>
-                        <p class="flex items-center gap-2 mt-1"><span class="text-brand-navy">🗓️</span> Since 2025</p>
+                        <span class="block text-white mb-2">Weekly tests</span>
+                        Marks shared with parents
                     </div>
-                </div>
-            </div>
-
-            <!-- Hero Badges (Retaining all original floating text from original site) -->
-            <div class="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-100 flex flex-col gap-6 justify-center h-full min-h-[400px]">
-                <img src="file_00000000ec64820b87c8ab099b158257.png" alt="Mission 99 Emblem" class="absolute -top-10 -right-10 h-32 w-32 opacity-10">
-                <div class="bg-blue-50 border-l-4 border-brand-navy p-4 rounded-r-lg shadow-sm">
-                    <h3 class="font-bold text-brand-navy text-lg">Weekly tests</h3>
-                    <p class="text-gray-600 text-sm">Marks shared with parents</p>
-                </div>
-                <div class="bg-yellow-50 border-l-4 border-brand-gold p-4 rounded-r-lg shadow-sm">
-                    <h3 class="font-bold text-brand-navy text-lg">Class 6th – 12th Arts</h3>
-                    <p class="text-gray-600 text-sm">Focus | Prepare | Achieve</p>
-                </div>
-                <div class="bg-gray-50 border-l-4 border-gray-400 p-4 rounded-r-lg shadow-sm">
-                    <h3 class="font-bold text-brand-navy text-lg italic">"More than just marks"</h3>
+                    <div>
+                        <span class="block text-white mb-2">Since 2025</span>
+                        Free to apply
+                    </div>
+                    <div>
+                        <span class="block text-white mb-2">Parimpora</span>
+                        Call back in one day
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- SUBJECTS TAUGHT TICKER (Original Section) -->
-    <section aria-label="Subjects taught at Mission 99" class="bg-brand-navy text-brand-gold py-4 overflow-hidden border-y-4 border-brand-gold">
-        <div class="whitespace-nowrap flex overflow-hidden w-full">
-            <ul class="flex animate-marquee min-w-full items-center text-lg font-bold tracking-widest uppercase">
-                <li class="mx-6">Mathematics <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Science <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">English <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Social Science <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">History <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Political Science <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Geography <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Economics <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Education <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Sociology <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Since 2025 <span class="mx-6 text-white">•</span></li>
-            </ul>
-            <!-- Duplicate for seamless loop -->
-            <ul class="flex animate-marquee min-w-full items-center text-lg font-bold tracking-widest uppercase" aria-hidden="true">
-                <li class="mx-6">Mathematics <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Science <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">English <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Social Science <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">History <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Political Science <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Geography <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Economics <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Education <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Sociology <span class="mx-6 text-white">•</span></li>
-                <li class="mx-6">Since 2025 <span class="mx-6 text-white">•</span></li>
+    <!-- ELEGANT TICKER -->
+    <section aria-label="Subjects taught at Mission 99" class="bg-brand-navy border-b border-white/10 py-6 overflow-hidden relative">
+        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-brand-navy to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-brand-navy to-transparent z-10"></div>
+        <div class="whitespace-nowrap flex overflow-hidden w-full opacity-50">
+            <ul class="flex animate-marquee min-w-full items-center text-2xl font-editorial italic text-white tracking-widest">
+                <li class="mx-8">Mathematics <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Science <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">English <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Social Science <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">History <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Political Science <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Geography <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Economics <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Education <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Sociology <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
+                <li class="mx-8">Since 2025 <span class="mx-8 text-brand-gold not-italic text-sm">/</span></li>
             </ul>
         </div>
     </section>
 
-    <!-- METHODOLOGY / A FIRST IN THE VALLEY (Original Section) -->
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-3 gap-12">
-            <div class="lg:col-span-1 space-y-4">
-                <span class="text-brand-gold font-bold uppercase tracking-widest text-sm">A first in the Valley</span>
-                <h2 class="text-4xl font-extrabold text-brand-navy leading-tight">Competitive-exam preparation that starts in Class 6th</h2>
-                <p class="text-gray-700 font-medium">Most students begin preparing for competitive examinations after Class 10th. At Mission 99, that preparation begins in Class 6th, so the habits, speed and reasoning are already in place when the big exams arrive.</p>
-                <p class="text-sm font-bold text-brand-navy border-l-4 border-brand-gold pl-4 py-1">The first coaching centre in Kashmir to start competitive-exam preparation this early</p>
-                <a href="/courses/" class="inline-block mt-4 text-brand-navy font-bold underline hover:text-brand-gold transition">See how each class is taught →</a>
+    <!-- METHODOLOGY / ASYMMETRICAL EDITORIAL LAYOUT -->
+    <section class="py-32 px-6 lg:px-12 max-w-screen-2xl mx-auto bg-brand-surface relative">
+        <div class="grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+            
+            <!-- Left Sticky Text -->
+            <div class="lg:col-span-5 lg:sticky lg:top-32">
+                <p class="text-brand-gold tracking-[0.2em] uppercase text-xs font-semibold mb-6">A first in the Valley</p>
+                <h2 class="text-5xl lg:text-6xl font-editorial text-brand-navy leading-tight mb-8">
+                    Competitive-exam preparation that starts in Class 6th.
+                </h2>
+                <p class="text-lg text-brand-muted font-light leading-relaxed mb-8">
+                    Most students begin preparing for competitive examinations after Class 10th. At Mission 99, that preparation begins in Class 6th, so the habits, speed and reasoning are already in place when the big exams arrive.
+                </p>
+                <div class="border-l border-brand-gold pl-6 py-2 mb-12">
+                    <p class="text-sm font-medium text-brand-navy tracking-wide">The first coaching centre in Kashmir to start competitive-exam preparation this early</p>
+                </div>
+                <a href="/courses/" class="inline-flex items-center gap-4 text-xs tracking-widest uppercase font-semibold text-brand-navy hover:text-brand-gold transition-colors group">
+                    See how each class is taught 
+                    <span class="w-8 h-[1px] bg-brand-navy group-hover:bg-brand-gold transition-colors"></span>
+                </a>
             </div>
 
-            <div class="lg:col-span-2">
-                <ol class="space-y-6">
-                    <li class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex gap-6 items-start hover:border-brand-gold transition-colors">
-                        <span class="text-4xl font-black text-gray-200">1</span>
+            <!-- Right Scroll Layout -->
+            <div class="lg:col-span-7">
+                <ol class="space-y-0">
+                    <!-- Step 1 -->
+                    <li class="group border-t border-gray-200 py-12 flex flex-col md:flex-row gap-8 md:gap-16 hover:border-brand-navy transition-colors duration-500">
+                        <span class="text-6xl md:text-8xl font-editorial text-gray-200 group-hover:text-brand-gold transition-colors duration-500 leading-none">01</span>
                         <div>
-                            <p class="text-sm font-bold text-brand-gold uppercase">Class 6th – 8th</p>
-                            <h3 class="text-2xl font-bold text-brand-navy mt-1">Build the base</h3>
-                            <p class="text-gray-600 mt-2">Reasoning, mental maths and reading skills alongside the school syllabus.</p>
+                            <p class="text-xs tracking-widest uppercase text-brand-muted mb-4">Class 6th – 8th</p>
+                            <h3 class="text-3xl font-editorial text-brand-navy mb-4">Build the base</h3>
+                            <p class="text-brand-muted font-light leading-relaxed">Reasoning, mental maths and reading skills alongside the school syllabus.</p>
                         </div>
                     </li>
-                    <li class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex gap-6 items-start hover:border-brand-gold transition-colors">
-                        <span class="text-4xl font-black text-gray-200">2</span>
+                    <!-- Step 2 -->
+                    <li class="group border-t border-gray-200 py-12 flex flex-col md:flex-row gap-8 md:gap-16 hover:border-brand-navy transition-colors duration-500">
+                        <span class="text-6xl md:text-8xl font-editorial text-gray-200 group-hover:text-brand-gold transition-colors duration-500 leading-none">02</span>
                         <div>
-                            <p class="text-sm font-bold text-brand-gold uppercase">Class 9th – 10th</p>
-                            <h3 class="text-2xl font-bold text-brand-navy mt-1">Sharpen for exams</h3>
-                            <p class="text-gray-600 mt-2">Timed practice, objective-type questions and concepts that go beyond the textbook.</p>
+                            <p class="text-xs tracking-widest uppercase text-brand-muted mb-4">Class 9th – 10th</p>
+                            <h3 class="text-3xl font-editorial text-brand-navy mb-4">Sharpen for exams</h3>
+                            <p class="text-brand-muted font-light leading-relaxed">Timed practice, objective-type questions and concepts that go beyond the textbook.</p>
                         </div>
                     </li>
-                    <li class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex gap-6 items-start hover:border-brand-gold transition-colors">
-                        <span class="text-4xl font-black text-gray-200">3</span>
+                    <!-- Step 3 -->
+                    <li class="group border-y border-gray-200 py-12 flex flex-col md:flex-row gap-8 md:gap-16 hover:border-brand-navy transition-colors duration-500">
+                        <span class="text-6xl md:text-8xl font-editorial text-gray-200 group-hover:text-brand-gold transition-colors duration-500 leading-none">03</span>
                         <div>
-                            <p class="text-sm font-bold text-brand-gold uppercase">Class 11th – 12th</p>
-                            <h3 class="text-2xl font-bold text-brand-navy mt-1">Ready to compete</h3>
-                            <p class="text-gray-600 mt-2">Board results and competitive-exam readiness, built over years, not months.</p>
+                            <p class="text-xs tracking-widest uppercase text-brand-muted mb-4">Class 11th – 12th</p>
+                            <h3 class="text-3xl font-editorial text-brand-navy mb-4">Ready to compete</h3>
+                            <p class="text-brand-muted font-light leading-relaxed">Board results and competitive-exam readiness, built over years, not months.</p>
                         </div>
                     </li>
                 </ol>
@@ -217,129 +247,150 @@
         </div>
     </section>
 
-    <!-- WHY MISSION 99 (Original Section) -->
-    <section aria-label="Why Mission 99" class="bg-brand-navy text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-3xl font-extrabold mb-12 text-brand-gold">Why Mission 99</h2>
-            <ul class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <li class="text-center space-y-2">
-                    <div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">🎓</div>
-                    <p class="font-bold text-xl">Dedicated faculty</p>
-                    <p class="text-gray-300 text-sm">Teachers who know every student by name</p>
+    <!-- WHY MISSION 99 / TYPOGRAPHIC GRID -->
+    <section aria-label="Why Mission 99" class="bg-brand-navy text-white py-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+        <div class="max-w-screen-2xl mx-auto px-6 lg:px-12 relative z-10">
+            <h2 class="text-xs tracking-[0.3em] uppercase text-brand-gold mb-20 text-center">Why Mission 99</h2>
+            
+            <ul class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <li class="pt-8 md:pt-0 md:px-8 first:px-0 first:pl-0">
+                    <span class="block text-4xl font-editorial text-brand-gold mb-6 italic">I.</span>
+                    <h3 class="text-xl font-medium tracking-wide mb-3">Dedicated faculty</h3>
+                    <p class="text-white/50 font-light text-sm">Teachers who know every student by name</p>
                 </li>
-                <li class="text-center space-y-2">
-                    <div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">💡</div>
-                    <p class="font-bold text-xl">Concept-first learning</p>
-                    <p class="text-gray-300 text-sm">Understanding before memorising</p>
+                <li class="pt-8 md:pt-0 md:px-8">
+                    <span class="block text-4xl font-editorial text-brand-gold mb-6 italic">II.</span>
+                    <h3 class="text-xl font-medium tracking-wide mb-3">Concept-first learning</h3>
+                    <p class="text-white/50 font-light text-sm">Understanding before memorising</p>
                 </li>
-                <li class="text-center space-y-2">
-                    <div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">📈</div>
-                    <p class="font-bold text-xl">Regular tests</p>
-                    <p class="text-gray-300 text-sm">Track progress every week</p>
+                <li class="pt-8 md:pt-0 md:px-8">
+                    <span class="block text-4xl font-editorial text-brand-gold mb-6 italic">III.</span>
+                    <h3 class="text-xl font-medium tracking-wide mb-3">Regular tests</h3>
+                    <p class="text-white/50 font-light text-sm">Track progress every week</p>
                 </li>
-                <li class="text-center space-y-2">
-                    <div class="bg-white/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20">🎯</div>
-                    <p class="font-bold text-xl">Board-ready</p>
-                    <p class="text-gray-300 text-sm">Syllabus, practice and revision on time</p>
+                <li class="pt-8 md:pt-0 md:px-8 last:pr-0">
+                    <span class="block text-4xl font-editorial text-brand-gold mb-6 italic">IV.</span>
+                    <h3 class="text-xl font-medium tracking-wide mb-3">Board-ready</h3>
+                    <p class="text-white/50 font-light text-sm">Syllabus, practice and revision on time</p>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- COURSES SECTION (Original Section) -->
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-200 pb-6">
-            <div>
-                <h2 class="text-4xl font-extrabold text-brand-navy">Choose your class</h2>
-                <p class="text-gray-600 mt-2 font-medium">Focused programmes for every stage, from strong basics to board exams.</p>
+    <!-- COURSES / EDITORIAL LIST (Replacing standard cards) -->
+    <section class="py-32 px-6 lg:px-12 max-w-screen-2xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-24 border-b border-brand-navy/10 pb-8">
+            <div class="max-w-2xl">
+                <h2 class="text-5xl md:text-6xl font-editorial text-brand-navy mb-6">Choose your class</h2>
+                <p class="text-lg text-brand-muted font-light">Focused programmes for every stage, from strong basics to board exams.</p>
             </div>
-            <div class="text-right mt-4 md:mt-0">
-                <p class="text-sm font-bold text-gray-500 uppercase">Since 2025</p>
-                <p class="text-xl font-bold text-brand-navy"><span class="text-3xl text-brand-gold">1</span> year of teaching</p>
+            <div class="text-right mt-8 md:mt-0 flex flex-col justify-end">
+                <p class="text-xs tracking-widest uppercase text-brand-muted mb-1">Since 2025</p>
+                <p class="text-2xl font-editorial text-brand-navy"><span class="text-4xl italic text-brand-gold">1</span> year of teaching</p>
             </div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" aria-label="Courses" role="region">
-            <!-- Card 1 -->
-            <a href="/courses/#foundation" class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all block">
-                <div class="bg-gray-100 h-40 w-full relative flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-brand-navy opacity-5 group-hover:opacity-10 transition"></div>
-                    <span class="font-black text-6xl text-gray-200 absolute -bottom-4 -right-2">6-8</span>
-                    <span class="relative bg-brand-gold text-brand-navy font-bold px-4 py-1 text-sm uppercase rounded-full shadow">Class 6–8</span>
+        <div aria-label="Courses" role="region" class="flex flex-col">
+            
+            <!-- Course Item 1 -->
+            <a href="/courses/#foundation" class="group flex flex-col md:flex-row items-center border-b border-brand-navy/10 py-10 hover:bg-white transition-colors duration-500">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-brand-gold">Class 6–8</span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold text-brand-navy">Strong Foundations</h3>
-                    <p class="text-gray-600 text-sm h-10">Strong basics in Maths, Science, English and Social Science.</p>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wide">Maths · Science · +2</div>
-                    <span class="block mt-4 text-brand-navy font-bold group-hover:text-brand-gold transition">Learn more →</span>
+                <div class="w-full md:w-1/3 mb-4 md:mb-0 pr-8">
+                    <h3 class="text-3xl font-editorial text-brand-navy group-hover:text-brand-gold transition-colors">Strong Foundations</h3>
+                    <div class="text-[0.65rem] tracking-widest uppercase text-brand-muted mt-4 flex items-center gap-2">
+                        Maths <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> Science <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> +2
+                    </div>
                 </div>
-            </a>
-
-            <!-- Card 2 -->
-            <a href="/courses/#board" class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all block">
-                <div class="bg-gray-100 h-40 w-full relative flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-brand-navy opacity-5 group-hover:opacity-10 transition"></div>
-                    <span class="font-black text-6xl text-gray-200 absolute -bottom-4 -right-2">9-10</span>
-                    <span class="relative bg-brand-gold text-brand-navy font-bold px-4 py-1 text-sm uppercase rounded-full shadow">Class 9–10</span>
+                <div class="w-full md:w-1/3">
+                    <p class="text-brand-muted font-light">Strong basics in Maths, Science, English and Social Science.</p>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold text-brand-navy">Board Ready</h3>
-                    <p class="text-gray-600 text-sm h-10">Complete syllabus, regular tests and board-exam preparation.</p>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wide">Maths · Science · +2</div>
-                    <span class="block mt-4 text-brand-navy font-bold group-hover:text-brand-gold transition">Learn more →</span>
+                <div class="w-full md:w-auto mt-6 md:mt-0 md:ml-auto text-right">
+                    <span class="text-xs tracking-widest uppercase text-brand-navy font-semibold border-b border-brand-navy pb-1 group-hover:border-brand-gold transition-colors">Learn more</span>
                 </div>
             </a>
 
-            <!-- Card 3 -->
-            <a href="/courses/#arts-11" class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all block">
-                <div class="bg-gray-100 h-40 w-full relative flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-brand-navy opacity-5 group-hover:opacity-10 transition"></div>
-                    <span class="font-black text-6xl text-gray-200 absolute -bottom-4 -right-2">11</span>
-                    <span class="relative bg-brand-gold text-brand-navy font-bold px-4 py-1 text-sm uppercase rounded-full shadow">Class 11 Arts</span>
+            <!-- Course Item 2 -->
+            <a href="/courses/#board" class="group flex flex-col md:flex-row items-center border-b border-brand-navy/10 py-10 hover:bg-white transition-colors duration-500">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-brand-gold">Class 9–10</span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold text-brand-navy">Arts, Clearly</h3>
-                    <p class="text-gray-600 text-sm h-10">Clear concepts and notes for every Arts subject from day one.</p>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wide">English · History · +5</div>
-                    <span class="block mt-4 text-brand-navy font-bold group-hover:text-brand-gold transition">Learn more →</span>
+                <div class="w-full md:w-1/3 mb-4 md:mb-0 pr-8">
+                    <h3 class="text-3xl font-editorial text-brand-navy group-hover:text-brand-gold transition-colors">Board Ready</h3>
+                    <div class="text-[0.65rem] tracking-widest uppercase text-brand-muted mt-4 flex items-center gap-2">
+                        Maths <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> Science <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> +2
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <p class="text-brand-muted font-light">Complete syllabus, regular tests and board-exam preparation.</p>
+                </div>
+                <div class="w-full md:w-auto mt-6 md:mt-0 md:ml-auto text-right">
+                    <span class="text-xs tracking-widest uppercase text-brand-navy font-semibold border-b border-brand-navy pb-1 group-hover:border-brand-gold transition-colors">Learn more</span>
                 </div>
             </a>
 
-            <!-- Card 4 -->
-            <a href="/courses/#arts-12" class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all block">
-                <div class="bg-gray-100 h-40 w-full relative flex items-center justify-center overflow-hidden">
-                    <div class="absolute inset-0 bg-brand-navy opacity-5 group-hover:opacity-10 transition"></div>
-                    <span class="font-black text-6xl text-gray-200 absolute -bottom-4 -right-2">12</span>
-                    <span class="relative bg-brand-gold text-brand-navy font-bold px-4 py-1 text-sm uppercase rounded-full shadow">Class 12 Arts</span>
+            <!-- Course Item 3 -->
+            <a href="/courses/#arts-11" class="group flex flex-col md:flex-row items-center border-b border-brand-navy/10 py-10 hover:bg-white transition-colors duration-500">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-brand-gold">Class 11 Arts</span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold text-brand-navy">Board Year, Arts</h3>
-                    <p class="text-gray-600 text-sm h-10">Board-pattern tests, past papers and answer-writing practice.</p>
-                    <div class="text-xs font-bold text-gray-400 uppercase tracking-wide">English · History · +5</div>
-                    <span class="block mt-4 text-brand-navy font-bold group-hover:text-brand-gold transition">Learn more →</span>
+                <div class="w-full md:w-1/3 mb-4 md:mb-0 pr-8">
+                    <h3 class="text-3xl font-editorial text-brand-navy group-hover:text-brand-gold transition-colors">Arts, Clearly</h3>
+                    <div class="text-[0.65rem] tracking-widest uppercase text-brand-muted mt-4 flex items-center gap-2">
+                        English <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> History <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> +5
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <p class="text-brand-muted font-light">Clear concepts and notes for every Arts subject from day one.</p>
+                </div>
+                <div class="w-full md:w-auto mt-6 md:mt-0 md:ml-auto text-right">
+                    <span class="text-xs tracking-widest uppercase text-brand-navy font-semibold border-b border-brand-navy pb-1 group-hover:border-brand-gold transition-colors">Learn more</span>
                 </div>
             </a>
+
+            <!-- Course Item 4 -->
+            <a href="/courses/#arts-12" class="group flex flex-col md:flex-row items-center border-b border-brand-navy/10 py-10 hover:bg-white transition-colors duration-500">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <span class="text-sm font-semibold tracking-widest uppercase text-brand-gold">Class 12 Arts</span>
+                </div>
+                <div class="w-full md:w-1/3 mb-4 md:mb-0 pr-8">
+                    <h3 class="text-3xl font-editorial text-brand-navy group-hover:text-brand-gold transition-colors">Board Year, Arts</h3>
+                    <div class="text-[0.65rem] tracking-widest uppercase text-brand-muted mt-4 flex items-center gap-2">
+                        English <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> History <span class="w-1 h-1 rounded-full bg-brand-gold/50"></span> +5
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <p class="text-brand-muted font-light">Board-pattern tests, past papers and answer-writing practice.</p>
+                </div>
+                <div class="w-full md:w-auto mt-6 md:mt-0 md:ml-auto text-right">
+                    <span class="text-xs tracking-widest uppercase text-brand-navy font-semibold border-b border-brand-navy pb-1 group-hover:border-brand-gold transition-colors">Learn more</span>
+                </div>
+            </a>
+
         </div>
     </section>
 
-    <!-- FLOATING ACTION BUTTONS -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+    <!-- FLOATING ACTION BUTTONS (Refined SVG paths and sizing) -->
+    <div class="fixed bottom-8 right-8 z-50 flex flex-col gap-4">
         
         <!-- Google Maps Button -->
         <a href="https://maps.app.goo.gl/QwJfC9DDgWj7gCSj6" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-center w-14 h-14 bg-white rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-gray-100"
+           class="group flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 border border-gray-100"
            aria-label="Find us on Google Maps">
-            <svg class="w-7 h-7 text-red-500 group-hover:text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            <svg class="w-5 h-5 text-brand-navy group-hover:text-brand-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
             </svg>
         </a>
 
-        <!-- WhatsApp Button -->
+        <!-- Fixed WhatsApp Button (Clean standard SVG) -->
         <a href="https://wa.me/919186190332?text=Hello%20Mission%2099%2C%20I%20want%20to%20inquire%20about%20admissions%20for%202027%20session" target="_blank" rel="noopener noreferrer" 
-           class="group flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-[0_8px_30px_rgb(37,211,102,0.3)] hover:shadow-[0_8px_30px_rgb(37,211,102,0.5)] hover:scale-105 transition-all duration-300"
+           class="group flex items-center justify-center w-12 h-12 bg-brand-navy rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 border border-brand-navy"
            aria-label="Chat on WhatsApp">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.031 21.922c-1.603 0-3.176-.42-4.563-1.216l-5.047 1.324 1.352-4.912c-.87-1.422-1.332-3.048-1.332-4.717 0-4.922 4.02-8.942 8.95-8.942 2.386 0 4.63.928 6.315 2.613 1.685 1.685 2.614 3.927 2.614 6.314 0 4.92-4.02 8.942-8.95 8.942zm-5.464-3.66c.112.063.224.116.335.174 1.256.657 2.673 1.002 4.132 1.002 4.048 0 7.34-3.292 7.34-7.34 0-1.962-.765-3.805-2.15-5.192C14.836 5.518 12.99 4.75 11.026 4.75c-4.045 0-7.338 3.29-7.338 7.338 0 1.54.408 3.036 1.18 4.33l.187.31-1.074 3.9 4.024-1.05zm7.342-5.442c-.412-.206-2.435-1.202-2.813-1.34-.378-.138-.654-.206-.93.206-.276.412-1.066 1.34-1.306 1.616-.24.276-.48.31-.892.104-2.11-.98-3.486-2.675-4.135-3.802-.138-.24.138-.236.545-.98.138-.24.068-.448-.034-.654-.103-.206-.93-2.242-1.275-3.068-.334-.8-.675-.69-.93-.702l-.795-.012c-.276 0-.724.103-1.102.516-.38.414-1.447 1.413-1.447 3.447s1.482 4.004 1.688 4.28c.206.276 2.923 4.464 7.077 6.257 2.454 1.055 3.328 1.144 3.945 1.077.707-.078 2.435-.995 2.78-1.96.344-.964.344-1.792.24-1.96-.103-.168-.38-.272-.793-.478z"/>
+            <svg class="w-6 h-6 text-white group-hover:text-[#25D366] transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
             </svg>
         </a>
     </div>
