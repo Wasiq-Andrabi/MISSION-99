@@ -8,75 +8,70 @@
 <meta property="og:title" content="Mission 99 — Disciplined Learning for a Brighter Tomorrow">
 <meta property="og:description" content="Competitive-exam preparation that starts in Class 6th. Classes 6th–10th & 11th–12th Arts. Near General Bus Stand, Parimpora, Srinagar.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://Mission-99.com">
 <meta property="og:image" content="https://raw.githubusercontent.com/Wasiq-Andrabi/MISSION-99/main/file_00000000ec64820b87c8ab099b158257.png">
 <link rel="icon" href="https://raw.githubusercontent.com/Wasiq-Andrabi/MISSION-99/main/file_00000000ec64820b87c8ab099b158257.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <script>
 tailwind.config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'Georgia', 'serif']
+        sans: ['Roboto', 'system-ui', 'sans-serif']
       },
       colors: {
-        ink:    { DEFAULT: '#151A3D', soft: '#1B1F4A', muted: '#242A5C' },
-        gold:   { DEFAULT: '#F5C24A', light: '#FFDA7A', deep: '#C99B2E' },
-        paper:  { DEFAULT: '#F7F4EE', warm: '#EFEAE0', deep: '#E5DFD2' },
-        violet: { DEFAULT: '#2E1F5E', soft: '#3D2A7A' }
+        ink:     { DEFAULT: '#151A3D', soft: '#1B1F4A', deep: '#0E1230' },
+        gold:    { DEFAULT: '#F5C24A', light: '#FFDA7A', deep: '#C99B2E' },
+        paper:   { DEFAULT: '#F7F4EE', warm: '#EFEAE0', deep: '#E5DFD2' },
+        violet:  { DEFAULT: '#2E1F5E', soft: '#3D2A7A' },
+        palette: {
+          sand:       '#EFE6D3',
+          emerald:    '#1F4A3D',
+          terracotta: '#B8552F',
+          indigo:     '#2E1F5E',
+          cream:      '#FBF8F1'
+        }
       }
     }
   }
 }
 </script>
 <style>
-  html { -webkit-font-smoothing: antialiased; }
-  body { background: #F7F4EE; color: #151A3D; overflow-x: hidden; }
-  .font-display { font-variation-settings: "opsz" 144, "SOFT" 0, "WONK" 0; }
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { background: #F7F4EE; color: #151A3D; overflow-x: hidden; font-family: 'Roboto', sans-serif; }
+
   ::-webkit-scrollbar { width: 10px; }
   ::-webkit-scrollbar-track { background: #151A3D; }
   ::-webkit-scrollbar-thumb { background: #F5C24A; }
 
-  /* Vibrant gradient backgrounds */
-  .bg-vibrant {
-    background: linear-gradient(135deg, #1B1F4A 0%, #2E1F5E 50%, #1B1F4A 100%);
-  }
-  .bg-vibrant-alt {
-    background: linear-gradient(160deg, #2E1F5E 0%, #1B1F4A 40%, #151A3D 100%);
-  }
   .bg-mesh {
     background:
       radial-gradient(circle at 15% 20%, rgba(245,194,74,0.12) 0%, transparent 45%),
       radial-gradient(circle at 85% 60%, rgba(120,90,220,0.18) 0%, transparent 50%),
-      radial-gradient(circle at 50% 100%, rgba(245,194,74,0.08) 0%, transparent 40%),
-      linear-gradient(135deg, #1B1F4A 0%, #2E1F5E 50%, #1B1F4A 100%);
+      linear-gradient(135deg, #1B1F4A 0%, #2E1F5E 55%, #151A3D 100%);
   }
   .bg-mesh-light {
     background:
-      radial-gradient(circle at 20% 30%, rgba(245,194,74,0.15) 0%, transparent 40%),
+      radial-gradient(circle at 20% 30%, rgba(245,194,74,0.14) 0%, transparent 42%),
       radial-gradient(circle at 80% 70%, rgba(120,90,220,0.12) 0%, transparent 45%),
       linear-gradient(160deg, #2E1F5E 0%, #1B1F4A 60%, #151A3D 100%);
   }
 
   .grain::before {
-    content: '';
-    position: absolute; inset: 0; pointer-events: none;
-    opacity: 0.05; z-index: 5;
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.05; z-index: 5;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     mix-blend-mode: overlay;
   }
 
-  .text-outline       { -webkit-text-stroke: 1px rgba(245,194,74,0.4);  color: transparent; }
-  .text-outline-light { -webkit-text-stroke: 1px rgba(21,26,61,0.12);   color: transparent; }
-  .text-outline-white { -webkit-text-stroke: 1px rgba(255,255,255,0.18); color: transparent; }
+  .text-outline       { -webkit-text-stroke: 1.5px rgba(245,194,74,0.5); color: transparent; }
+  .text-outline-light { -webkit-text-stroke: 1px rgba(21,26,61,0.15); color: transparent; }
+  .text-outline-white { -webkit-text-stroke: 1.5px rgba(255,255,255,0.22); color: transparent; }
 
-  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal { opacity: 0; transform: translateY(35px); transition: opacity 1s cubic-bezier(.16,1,.3,1), transform 1s cubic-bezier(.16,1,.3,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
-  .reveal-slow { transition-duration: 1.6s; }
+  .reveal-slow { transition-duration: 1.4s; }
 
   @keyframes marquee { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
   .marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
@@ -91,48 +86,47 @@ tailwind.config = {
   }
   .link-underline:hover::after { transform: scaleX(1); transform-origin: left; }
 
-  /* Course rows */
-  .course-row { position: relative; transition: color 0.6s ease; overflow: hidden; }
-  .course-row .row-bg {
-    position: absolute; inset: 0; background: #151A3D;
-    transform: scaleY(0); transform-origin: bottom;
-    transition: transform 0.7s cubic-bezier(0.83, 0, 0.17, 1);
-    z-index: 0;
-  }
-  .course-row:hover .row-bg { transform: scaleY(1); }
-  .course-row > * { position: relative; z-index: 1; }
-  .course-row:hover .row-title { color: #F5C24A; }
-  .course-row:hover .row-meta  { color: rgba(255,255,255,0.55); }
-  .course-row:hover .row-desc  { color: rgba(255,255,255,0.75); }
-  .course-row:hover .row-num   { -webkit-text-stroke-color: rgba(245,194,74,0.4); }
-  .course-row:hover .row-arrow { transform: translateX(0); opacity: 1; color: #F5C24A; }
-  .course-row .row-arrow { transform: translateX(-10px); opacity: 0; transition: all 0.5s ease; }
-
-  /* Menu overlay */
   .menu-overlay { clip-path: inset(0 0 100% 0); transition: clip-path 0.9s cubic-bezier(0.83, 0, 0.17, 1); }
   .menu-overlay.open { clip-path: inset(0 0 0 0); }
 
-  /* Hamburger */
   .ham span { display: block; width: 28px; height: 1.5px; background: currentColor; transition: all 0.5s cubic-bezier(0.83, 0, 0.17, 1); }
   .ham.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .ham.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
   .ham.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-  /* Gold gradient text */
   .text-gold-gradient {
     background: linear-gradient(135deg, #F5C24A 0%, #FFDA7A 50%, #C99B2E 100%);
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
 
-  .nav-link { position: relative; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; font-weight: 500; }
+  .nav-link { position: relative; font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; font-weight: 500; }
   .nav-link::before {
     content: ''; position: absolute; left: -18px; top: 50%; width: 8px; height: 1px;
-    background: #F5C24A; transform: scaleX(0); transform-origin: right;
-    transition: transform 0.4s ease;
+    background: #F5C24A; transform: scaleX(0); transform-origin: right; transition: transform 0.4s ease;
   }
   .nav-link:hover::before { transform: scaleX(1); transform-origin: left; }
 
   section[id] { scroll-margin-top: 100px; }
+
+  /* Palette course cards */
+  .course-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(.16,1,.3,1), box-shadow 0.6s ease;
+  }
+  .course-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -20px rgba(21,26,61,0.25); }
+  .course-card .corner-mark {
+    position: absolute; width: 14px; height: 14px; opacity: 0.4;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  .course-card:hover .corner-mark { opacity: 1; transform: scale(1.2); }
+
+  .course-card .big-num {
+    position: absolute; font-weight: 900; line-height: 1; opacity: 0.08;
+    pointer-events: none; user-select: none;
+    transition: opacity 0.5s ease, transform 0.8s cubic-bezier(.16,1,.3,1);
+  }
+  .course-card:hover .big-num { opacity: 0.15; transform: scale(1.05); }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -172,8 +166,8 @@ tailwind.config = {
 <header class="fixed top-9 left-0 right-0 z-50">
   <div class="mx-auto max-w-[1400px] px-6 lg:px-10 py-5 flex items-center justify-between">
     <a href="#home" class="flex items-center gap-3 group relative z-[70]">
-      <img src="https://raw.githubusercontent.com/Wasiq-Andrabi/MISSION-99/main/file_00000000ec64820b87c8ab099b158257.png" alt="Mission 99 logo" width="44" height="44" class="h-10 w-10 object-contain transition-transform duration-700 group-hover:rotate-[8deg]">
-      <span class="font-display text-lg font-medium text-paper tracking-wide hidden sm:inline-block">Mission 99</span>
+      <img src="https://raw.githubusercontent.com/Wasiq-Andrabi/MISSION-99/main/file_00000000ec64820b87c8ab099b158257.png" alt="Mission 99 logo" width="44" height="44" class="h-10 w-10 object-contain">
+      <span class="text-lg font-medium text-paper tracking-wide hidden sm:inline-block">Mission 99</span>
     </a>
     <nav class="hidden lg:flex items-center gap-10 text-paper">
       <a href="#home" class="nav-link hover:text-gold transition-colors">Home</a>
@@ -182,7 +176,7 @@ tailwind.config = {
       <a href="#about" class="nav-link hover:text-gold transition-colors">About</a>
       <a href="#contact" class="nav-link hover:text-gold transition-colors">Contact</a>
     </nav>
-    <a href="#admissions" class="hidden lg:inline-flex items-center gap-3 text-gold text-[0.7rem] font-semibold tracking-[0.28em] uppercase group">
+    <a href="#admissions" class="hidden lg:inline-flex items-center gap-3 text-gold text-[0.72rem] font-medium tracking-[0.26em] uppercase group">
       <span class="link-underline">Apply Now</span>
       <svg class="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M5 12h14M13 5l7 7-7 7"/></svg>
     </a>
@@ -193,17 +187,17 @@ tailwind.config = {
 </header>
 
 <!-- ========== MOBILE MENU ========== -->
-<div id="menu-overlay" class="menu-overlay fixed inset-0 z-[65] bg-vibrant flex flex-col justify-between">
+<div id="menu-overlay" class="menu-overlay fixed inset-0 z-[65] bg-mesh flex flex-col justify-between">
   <div class="absolute inset-0 opacity-[0.05] pointer-events-none flex items-center justify-center">
-    <span class="font-display text-[70vh] leading-none text-gold">99</span>
+    <span class="text-[70vh] font-black leading-none text-gold">99</span>
   </div>
   <div class="relative flex-1 flex flex-col justify-center px-8 pt-32 pb-16">
     <nav class="flex flex-col gap-6 max-w-md">
-      <a href="#home" class="menu-link font-display text-5xl md:text-6xl text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2 font-sans">01</span>Home</a>
-      <a href="#courses" class="menu-link font-display text-5xl md:text-6xl text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2 font-sans">02</span>Courses</a>
-      <a href="#admissions" class="menu-link font-display text-5xl md:text-6xl text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2 font-sans">03</span>Admissions</a>
-      <a href="#about" class="menu-link font-display text-5xl md:text-6xl text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2 font-sans">04</span>About</a>
-      <a href="#contact" class="menu-link font-display text-5xl md:text-6xl text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2 font-sans">05</span>Contact</a>
+      <a href="#home" class="menu-link text-5xl md:text-6xl font-light text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2">01</span>Home</a>
+      <a href="#courses" class="menu-link text-5xl md:text-6xl font-light text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2">02</span>Courses</a>
+      <a href="#admissions" class="menu-link text-5xl md:text-6xl font-light text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2">03</span>Admissions</a>
+      <a href="#about" class="menu-link text-5xl md:text-6xl font-light text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2">04</span>About</a>
+      <a href="#contact" class="menu-link text-5xl md:text-6xl font-light text-paper hover:text-gold transition-colors duration-500"><span class="text-gold/50 text-xs tracking-[0.4em] uppercase block mb-2">05</span>Contact</a>
     </nav>
   </div>
   <div class="relative px-8 pb-10 flex flex-col gap-4 border-t border-paper/10 pt-6">
@@ -215,13 +209,13 @@ tailwind.config = {
 <!-- ========== HERO ========== -->
 <section id="home" class="relative min-h-[100svh] w-full bg-mesh overflow-hidden grain">
   <div class="absolute inset-0">
-    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2400" alt="Students at Mission 99" class="w-full h-full object-cover opacity-25">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2400" alt="Students at Mission 99" class="w-full h-full object-cover opacity-30">
     <div class="absolute inset-0 bg-gradient-to-br from-ink/85 via-violet/70 to-ink/90"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
   </div>
 
-  <div class="absolute -right-10 lg:-right-20 top-1/2 -translate-y-1/2 pointer-events-none select-none opacity-50" aria-hidden="true">
-    <span class="font-display font-light text-[55vw] lg:text-[42vw] leading-[0.75] text-outline-white">99</span>
+  <div class="absolute -right-10 lg:-right-20 top-1/2 -translate-y-1/2 pointer-events-none select-none opacity-60" aria-hidden="true">
+    <span class="font-black text-[55vw] lg:text-[42vw] leading-[0.75] text-outline-white">99</span>
   </div>
 
   <div class="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-10 pt-40 lg:pt-48 pb-20 min-h-[100svh] flex flex-col justify-between">
@@ -234,7 +228,7 @@ tailwind.config = {
     </div>
 
     <div class="max-w-5xl py-16">
-      <h1 class="reveal reveal-slow font-display text-paper font-light leading-[0.92] tracking-[-0.02em] text-[3rem] sm:text-[4.5rem] lg:text-[6.75rem] mb-10">
+      <h1 class="reveal reveal-slow text-paper font-light leading-[0.98] tracking-[-0.02em] text-[3rem] sm:text-[4.5rem] lg:text-[6.5rem] mb-10">
         Disciplined <span class="italic text-gold-gradient font-normal">Learning.</span><br>
         <span class="text-paper/95">Brighter</span> <span class="italic text-gold-gradient font-normal">Tomorrow.</span>
       </h1>
@@ -244,8 +238,8 @@ tailwind.config = {
           At Mission 99, students build strong concepts, confidence and clarity — for school, board exams and beyond.
         </p>
         <div class="flex flex-col sm:flex-row gap-6 items-start">
-          <a href="#admissions" class="bg-gold text-ink px-8 py-4 text-[0.7rem] font-bold tracking-[0.28em] uppercase transition-all hover:bg-gold-light">Apply for admission</a>
-          <a href="#courses" class="group flex items-center gap-3 text-paper text-[0.7rem] font-bold tracking-[0.28em] uppercase py-4">
+          <a href="#admissions" class="bg-gold text-ink px-8 py-4 text-[0.72rem] font-medium tracking-[0.26em] uppercase transition-all hover:bg-gold-light">Apply for admission</a>
+          <a href="#courses" class="group flex items-center gap-3 text-paper text-[0.72rem] font-medium tracking-[0.26em] uppercase py-4">
             <span class="link-underline">View courses</span>
             <svg class="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
@@ -257,22 +251,22 @@ tailwind.config = {
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8">
         <div class="flex flex-col gap-2">
           <span class="text-gold/70 text-[0.6rem] tracking-[0.32em] uppercase">Programmes</span>
-          <span class="text-paper font-display text-xl lg:text-2xl font-light">Class 6th – 12th</span>
+          <span class="text-paper text-xl lg:text-2xl font-light">Class 6th – 12th</span>
           <span class="text-paper/50 text-xs tracking-[0.2em] uppercase">Arts · More than marks</span>
         </div>
         <div class="flex flex-col gap-2">
           <span class="text-gold/70 text-[0.6rem] tracking-[0.32em] uppercase">Weekly</span>
-          <span class="text-paper font-display text-xl lg:text-2xl font-light">Tests</span>
+          <span class="text-paper text-xl lg:text-2xl font-light">Tests</span>
           <span class="text-paper/50 text-xs tracking-[0.2em] uppercase">Marks shared with parents</span>
         </div>
         <div class="flex flex-col gap-2">
           <span class="text-gold/70 text-[0.6rem] tracking-[0.32em] uppercase">Free</span>
-          <span class="text-paper font-display text-xl lg:text-2xl font-light">To apply</span>
+          <span class="text-paper text-xl lg:text-2xl font-light">To apply</span>
           <span class="text-paper/50 text-xs tracking-[0.2em] uppercase">Call back within one working day</span>
         </div>
         <div class="flex flex-col gap-2">
           <span class="text-gold/70 text-[0.6rem] tracking-[0.32em] uppercase">Parimpora</span>
-          <span class="text-paper font-display text-xl lg:text-2xl font-light">Since 2025</span>
+          <span class="text-paper text-xl lg:text-2xl font-light">Since 2025</span>
           <span class="text-paper/50 text-xs tracking-[0.2em] uppercase">Near General Bus Stand</span>
         </div>
       </div>
@@ -283,7 +277,7 @@ tailwind.config = {
 <!-- ========== SUBJECTS MARQUEE ========== -->
 <section class="relative bg-gold text-ink py-10 lg:py-14 overflow-hidden border-y border-ink/10" aria-label="Subjects taught">
   <div class="marquee-track">
-    <ul class="flex items-center shrink-0 font-display text-4xl lg:text-7xl font-light tracking-tight">
+    <ul class="flex items-center shrink-0 text-4xl lg:text-7xl font-light tracking-tight">
       <li class="px-8 whitespace-nowrap">Mathematics</li><li class="px-4 text-gold-deep">◆</li>
       <li class="px-8 whitespace-nowrap italic">Science</li><li class="px-4 text-gold-deep">◆</li>
       <li class="px-8 whitespace-nowrap">English</li><li class="px-4 text-gold-deep">◆</li>
@@ -296,7 +290,7 @@ tailwind.config = {
       <li class="px-8 whitespace-nowrap italic">Sociology</li><li class="px-4 text-gold-deep">◆</li>
       <li class="px-8 whitespace-nowrap text-outline-light">Since 2025</li><li class="px-4 text-gold-deep">◆</li>
     </ul>
-    <ul class="flex items-center shrink-0 font-display text-4xl lg:text-7xl font-light tracking-tight" aria-hidden="true">
+    <ul class="flex items-center shrink-0 text-4xl lg:text-7xl font-light tracking-tight" aria-hidden="true">
       <li class="px-8 whitespace-nowrap">Mathematics</li><li class="px-4 text-gold-deep">◆</li>
       <li class="px-8 whitespace-nowrap italic">Science</li><li class="px-4 text-gold-deep">◆</li>
       <li class="px-8 whitespace-nowrap">English</li><li class="px-4 text-gold-deep">◆</li>
@@ -315,7 +309,7 @@ tailwind.config = {
 <!-- ========== ABOUT ========== -->
 <section id="about" class="relative bg-paper py-24 lg:py-40 overflow-hidden">
   <div class="absolute -left-32 lg:-left-40 top-1/3 pointer-events-none select-none" aria-hidden="true">
-    <span class="font-display text-[40vw] leading-none text-outline-light">99</span>
+    <span class="text-[40vw] font-black leading-none text-outline-light">99</span>
   </div>
 
   <div class="relative max-w-[1400px] mx-auto px-6 lg:px-10">
@@ -326,7 +320,7 @@ tailwind.config = {
 
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
       <div class="lg:col-span-7 lg:pt-8">
-        <h2 class="reveal font-display text-ink font-light text-[2.25rem] sm:text-[3.25rem] lg:text-[4.5rem] leading-[1.05] tracking-[-0.02em] mb-10">
+        <h2 class="reveal text-ink font-light text-[2.25rem] sm:text-[3.25rem] lg:text-[4.25rem] leading-[1.08] tracking-[-0.02em] mb-10">
           Competitive-exam <br class="hidden sm:block">preparation that <br class="hidden sm:block">starts in <span class="italic text-gold-gradient font-normal">Class 6th.</span>
         </h2>
         <div class="reveal w-24 h-px bg-ink/20 mb-10" style="transition-delay: 200ms;"></div>
@@ -340,7 +334,7 @@ tailwind.config = {
           <span class="absolute -bottom-3 -right-3 w-6 h-6 border-b border-r border-gold"></span>
           <div class="bg-white border border-ink/10 p-8 lg:p-10">
             <p class="text-gold-deep text-[0.62rem] tracking-[0.35em] uppercase mb-4">First in Kashmir</p>
-            <p class="text-ink font-display text-2xl lg:text-3xl font-light leading-tight">
+            <p class="text-ink text-2xl lg:text-3xl font-light leading-tight">
               The first coaching centre in Kashmir to start competitive-exam preparation this early.
             </p>
           </div>
@@ -356,180 +350,227 @@ tailwind.config = {
 
       <ol class="space-y-0">
         <li class="reveal border-t border-ink/15 py-10 lg:py-14 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div class="lg:col-span-2">
-            <span class="font-display text-gold text-5xl lg:text-6xl font-light">01</span>
-          </div>
+          <div class="lg:col-span-2"><span class="text-gold text-5xl lg:text-6xl font-light">01</span></div>
           <div class="lg:col-span-3">
             <p class="text-ink/50 text-[0.62rem] tracking-[0.35em] uppercase mb-3">Class 6th – 8th</p>
-            <h3 class="font-display text-ink text-2xl lg:text-3xl font-light">Build the base</h3>
+            <h3 class="text-ink text-2xl lg:text-3xl font-light">Build the base</h3>
           </div>
-          <div class="lg:col-span-7">
-            <p class="text-ink/70 text-lg font-light leading-relaxed">Reasoning, mental maths and reading skills alongside the school syllabus.</p>
-          </div>
+          <div class="lg:col-span-7"><p class="text-ink/70 text-lg font-light leading-relaxed">Reasoning, mental maths and reading skills alongside the school syllabus.</p></div>
         </li>
         <li class="reveal border-t border-ink/15 py-10 lg:py-14 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div class="lg:col-span-2"><span class="font-display text-gold text-5xl lg:text-6xl font-light">02</span></div>
+          <div class="lg:col-span-2"><span class="text-gold text-5xl lg:text-6xl font-light">02</span></div>
           <div class="lg:col-span-3">
             <p class="text-ink/50 text-[0.62rem] tracking-[0.35em] uppercase mb-3">Class 9th – 10th</p>
-            <h3 class="font-display text-ink text-2xl lg:text-3xl font-light">Sharpen for exams</h3>
+            <h3 class="text-ink text-2xl lg:text-3xl font-light">Sharpen for exams</h3>
           </div>
-          <div class="lg:col-span-7">
-            <p class="text-ink/70 text-lg font-light leading-relaxed">Timed practice, objective-type questions and concepts that go beyond the textbook.</p>
-          </div>
+          <div class="lg:col-span-7"><p class="text-ink/70 text-lg font-light leading-relaxed">Timed practice, objective-type questions and concepts that go beyond the textbook.</p></div>
         </li>
         <li class="reveal border-t border-b border-ink/15 py-10 lg:py-14 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          <div class="lg:col-span-2"><span class="font-display text-gold text-5xl lg:text-6xl font-light">03</span></div>
+          <div class="lg:col-span-2"><span class="text-gold text-5xl lg:text-6xl font-light">03</span></div>
           <div class="lg:col-span-3">
             <p class="text-ink/50 text-[0.62rem] tracking-[0.35em] uppercase mb-3">Class 11th – 12th</p>
-            <h3 class="font-display text-ink text-2xl lg:text-3xl font-light">Ready to compete</h3>
+            <h3 class="text-ink text-2xl lg:text-3xl font-light">Ready to compete</h3>
           </div>
-          <div class="lg:col-span-7">
-            <p class="text-ink/70 text-lg font-light leading-relaxed">Board results and competitive-exam readiness, built over years, not months.</p>
-          </div>
+          <div class="lg:col-span-7"><p class="text-ink/70 text-lg font-light leading-relaxed">Board results and competitive-exam readiness, built over years, not months.</p></div>
         </li>
       </ol>
     </div>
   </div>
 </section>
 
+<!-- ⏭️ CONTINUED IN PART 2: Why Mission 99, Courses (palette boxes), Focus/Prepare/Achieve, Contact, Admissions CTA, Footer, Floating buttons, JavaScript -->
+
 <!-- ========== WHY MISSION 99 ========== -->
 <section class="bg-mesh-light text-paper py-24 lg:py-40 relative overflow-hidden grain">
-  <div class="absolute right-0 bottom-0 text-[40vw] font-display font-bold leading-none text-outline opacity-20 translate-y-1/4 translate-x-1/4 select-none" aria-hidden="true">99</div>
+  <div class="absolute right-0 bottom-0 text-[40vw] font-black leading-none text-outline opacity-20 translate-y-1/4 translate-x-1/4 select-none" aria-hidden="true">99</div>
 
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
     <div class="reveal flex items-center gap-4 mb-6">
       <span class="w-12 h-px bg-gold/60"></span>
       <span class="text-gold/80 text-[0.68rem] tracking-[0.35em] uppercase">Why Mission 99</span>
     </div>
-    <h2 class="reveal font-display text-paper font-light text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] leading-[1.05] tracking-[-0.02em] mb-20 lg:mb-28 max-w-3xl">
+    <h2 class="reveal text-paper font-light text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] leading-[1.05] tracking-[-0.02em] mb-20 lg:mb-28 max-w-3xl">
       Four reasons parents choose us.
     </h2>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
       <div class="reveal border-t border-paper/20 pt-8">
         <p class="text-gold/70 text-[0.6rem] tracking-[0.35em] uppercase mb-6">01</p>
-        <h3 class="font-display text-3xl lg:text-4xl font-light mb-4">Dedicated <em class="text-gold-gradient not-italic">faculty</em></h3>
+        <h3 class="text-3xl lg:text-4xl font-light mb-4">Dedicated <em class="text-gold-gradient not-italic font-normal">faculty</em></h3>
         <p class="text-paper/60 font-light leading-relaxed">Teachers who know every student by name.</p>
       </div>
       <div class="reveal border-t border-paper/20 pt-8" style="transition-delay: 100ms;">
         <p class="text-gold/70 text-[0.6rem] tracking-[0.35em] uppercase mb-6">02</p>
-        <h3 class="font-display text-3xl lg:text-4xl font-light mb-4">Concept-first <em class="text-gold-gradient not-italic">learning</em></h3>
+        <h3 class="text-3xl lg:text-4xl font-light mb-4">Concept-first <em class="text-gold-gradient not-italic font-normal">learning</em></h3>
         <p class="text-paper/60 font-light leading-relaxed">Understanding before memorising.</p>
       </div>
       <div class="reveal border-t border-paper/20 pt-8" style="transition-delay: 200ms;">
         <p class="text-gold/70 text-[0.6rem] tracking-[0.35em] uppercase mb-6">03</p>
-        <h3 class="font-display text-3xl lg:text-4xl font-light mb-4">Regular <em class="text-gold-gradient not-italic">tests</em></h3>
+        <h3 class="text-3xl lg:text-4xl font-light mb-4">Regular <em class="text-gold-gradient not-italic font-normal">tests</em></h3>
         <p class="text-paper/60 font-light leading-relaxed">Track progress every week.</p>
       </div>
       <div class="reveal border-t border-paper/20 pt-8" style="transition-delay: 300ms;">
         <p class="text-gold/70 text-[0.6rem] tracking-[0.35em] uppercase mb-6">04</p>
-        <h3 class="font-display text-3xl lg:text-4xl font-light mb-4">Board-<em class="text-gold-gradient not-italic">ready</em></h3>
+        <h3 class="text-3xl lg:text-4xl font-light mb-4">Board-<em class="text-gold-gradient not-italic font-normal">ready</em></h3>
         <p class="text-paper/60 font-light leading-relaxed">Syllabus, practice and revision on time.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== COURSES ========== -->
+<!-- ========== COURSES — PALETTE BOXES ========== -->
 <section id="courses" class="bg-paper py-24 lg:py-40 relative overflow-hidden">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-    <div class="reveal flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20 lg:mb-28">
+
+    <!-- Header -->
+    <div class="reveal flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16 lg:mb-24">
       <div>
         <div class="flex items-center gap-4 mb-6">
           <span class="w-12 h-px bg-ink/30"></span>
           <span class="text-ink/60 text-[0.68rem] tracking-[0.35em] uppercase">Programmes</span>
         </div>
-        <h2 class="font-display text-ink font-light text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] leading-[1.05] tracking-[-0.02em] max-w-2xl">
-          Choose your <em class="text-gold-gradient not-italic">class.</em>
+        <h2 class="text-ink font-light text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] leading-[1.05] tracking-[-0.02em] max-w-2xl">
+          Choose your <em class="text-gold-gradient not-italic font-normal">class.</em>
         </h2>
         <p class="text-ink/60 text-lg font-light mt-6 max-w-xl">Focused programmes for every stage, from strong basics to board exams.</p>
       </div>
       <div class="md:text-right shrink-0">
         <p class="text-ink/40 text-[0.62rem] tracking-[0.35em] uppercase mb-2">Since 2025</p>
-        <p class="font-display text-ink text-3xl md:text-4xl font-light"><span class="text-gold">1</span> year of teaching</p>
+        <p class="text-ink text-3xl md:text-4xl font-light"><span class="text-gold-deep">1</span> year of teaching</p>
       </div>
     </div>
 
-    <div class="border-t border-ink/15">
-      <a href="#admissions" class="course-row group block border-b border-ink/15 py-10 lg:py-12 relative">
-        <span class="row-bg"></span>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-          <div class="md:col-span-3 flex items-center gap-6">
-            <span class="font-display text-3xl lg:text-4xl font-light text-ink/30 row-num">06–08</span>
-            <span class="text-ink/50 text-[0.6rem] tracking-[0.32em] uppercase row-meta">Class 6–8</span>
+    <!-- Palette Grid -->
+    <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
+
+      <!-- ========== BOX 1: CLASS 6–8 — SAND CREAM ========== -->
+      <a href="#admissions" class="course-card reveal bg-palette-sand text-ink p-8 lg:p-12 min-h-[420px] lg:min-h-[520px] flex flex-col justify-between">
+        <span class="corner-mark border-t border-l border-ink top-4 left-4"></span>
+        <span class="corner-mark border-t border-r border-ink top-4 right-4"></span>
+        <span class="corner-mark border-b border-l border-ink bottom-4 left-4"></span>
+        <span class="corner-mark border-b border-r border-ink bottom-4 right-4"></span>
+        <span class="big-num text-ink right-4 bottom-0 text-[10rem] lg:text-[14rem]">6-8</span>
+
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="w-8 h-px bg-ink/40"></span>
+            <span class="text-[0.62rem] tracking-[0.35em] uppercase font-medium">Class 6–8</span>
           </div>
-          <div class="md:col-span-4">
-            <h3 class="row-title font-display text-2xl lg:text-3xl font-light text-ink mb-2">Strong Foundations</h3>
-            <p class="row-meta text-ink/50 text-[0.65rem] tracking-[0.3em] uppercase">Maths / Science / +2</p>
+          <h3 class="text-4xl lg:text-5xl font-light leading-[1.05] mb-6">
+            Strong<br>
+            <span class="italic font-normal">Foundations.</span>
+          </h3>
+          <p class="text-ink/70 text-lg font-light leading-relaxed max-w-md mb-8">
+            Strong basics in Maths, Science, English and Social Science.
+          </p>
+        </div>
+
+        <div class="relative z-10 flex items-end justify-between">
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-ink/30 px-3 py-1.5">Maths</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-ink/30 px-3 py-1.5">Science</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-ink/30 px-3 py-1.5">+2</span>
           </div>
-          <div class="md:col-span-4">
-            <p class="row-desc text-ink/65 font-light leading-relaxed">Strong basics in Maths, Science, English and Social Science.</p>
-          </div>
-          <div class="md:col-span-1 hidden md:flex justify-end">
-            <svg class="row-arrow w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </div>
+          <svg class="w-8 h-8 opacity-60 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.2" d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
       </a>
 
-      <a href="#admissions" class="course-row group block border-b border-ink/15 py-10 lg:py-12 relative">
-        <span class="row-bg"></span>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-          <div class="md:col-span-3 flex items-center gap-6">
-            <span class="font-display text-3xl lg:text-4xl font-light text-ink/30 row-num">09–10</span>
-            <span class="text-ink/50 text-[0.6rem] tracking-[0.32em] uppercase row-meta">Class 9–10</span>
+      <!-- ========== BOX 2: CLASS 9–10 — DEEP EMERALD ========== -->
+      <a href="#admissions" class="course-card reveal bg-palette-emerald text-palette-cream p-8 lg:p-12 min-h-[420px] lg:min-h-[520px] flex flex-col justify-between" style="transition-delay: 100ms;">
+        <span class="corner-mark border-t border-l border-palette-cream/40 top-4 left-4"></span>
+        <span class="corner-mark border-t border-r border-palette-cream/40 top-4 right-4"></span>
+        <span class="corner-mark border-b border-l border-palette-cream/40 bottom-4 left-4"></span>
+        <span class="corner-mark border-b border-r border-palette-cream/40 bottom-4 right-4"></span>
+        <span class="big-num text-palette-cream left-4 bottom-0 text-[10rem] lg:text-[14rem]">9-10</span>
+
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="w-8 h-px bg-palette-cream/50"></span>
+            <span class="text-[0.62rem] tracking-[0.35em] uppercase font-medium">Class 9–10</span>
           </div>
-          <div class="md:col-span-4">
-            <h3 class="row-title font-display text-2xl lg:text-3xl font-light text-ink mb-2">Board Ready</h3>
-            <p class="row-meta text-ink/50 text-[0.65rem] tracking-[0.3em] uppercase">Maths / Science / +2</p>
+          <h3 class="text-4xl lg:text-5xl font-light leading-[1.05] mb-6">
+            Board<br>
+            <span class="italic font-normal text-gold">Ready.</span>
+          </h3>
+          <p class="text-palette-cream/75 text-lg font-light leading-relaxed max-w-md mb-8">
+            Complete syllabus, regular tests and board-exam preparation.
+          </p>
+        </div>
+
+        <div class="relative z-10 flex items-end justify-between">
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-palette-cream/30 px-3 py-1.5">Maths</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-palette-cream/30 px-3 py-1.5">Science</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-palette-cream/30 px-3 py-1.5">+2</span>
           </div>
-          <div class="md:col-span-4">
-            <p class="row-desc text-ink/65 font-light leading-relaxed">Complete syllabus, regular tests and board-exam preparation.</p>
-          </div>
-          <div class="md:col-span-1 hidden md:flex justify-end">
-            <svg class="row-arrow w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </div>
+          <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.2" d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
       </a>
 
-      <a href="#admissions" class="course-row group block border-b border-ink/15 py-10 lg:py-12 relative">
-        <span class="row-bg"></span>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-          <div class="md:col-span-3 flex items-center gap-6">
-            <span class="font-display text-3xl lg:text-4xl font-light text-ink/30 row-num">11</span>
-            <span class="text-ink/50 text-[0.6rem] tracking-[0.32em] uppercase row-meta">Class 11 Arts</span>
+      <!-- ========== BOX 3: CLASS 11 ARTS — TERRACOTTA ========== -->
+      <a href="#admissions" class="course-card reveal bg-palette-terracotta text-palette-cream p-8 lg:p-12 min-h-[420px] lg:min-h-[520px] flex flex-col justify-between" style="transition-delay: 200ms;">
+        <span class="corner-mark border-t border-l border-palette-cream/40 top-4 left-4"></span>
+        <span class="corner-mark border-t border-r border-palette-cream/40 top-4 right-4"></span>
+        <span class="corner-mark border-b border-l border-palette-cream/40 bottom-4 left-4"></span>
+        <span class="corner-mark border-b border-r border-palette-cream/40 bottom-4 right-4"></span>
+        <span class="big-num text-palette-cream right-4 bottom-0 text-[10rem] lg:text-[14rem]">11</span>
+
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="w-8 h-px bg-palette-cream/50"></span>
+            <span class="text-[0.62rem] tracking-[0.35em] uppercase font-medium">Class 11 Arts</span>
           </div>
-          <div class="md:col-span-4">
-            <h3 class="row-title font-display text-2xl lg:text-3xl font-light text-ink mb-2">Arts, Clearly</h3>
-            <p class="row-meta text-ink/50 text-[0.65rem] tracking-[0.3em] uppercase">English / History / +5</p>
+          <h3 class="text-4xl lg:text-5xl font-light leading-[1.05] mb-6">
+            Arts,<br>
+            <span class="italic font-normal">Clearly.</span>
+          </h3>
+          <p class="text-palette-cream/80 text-lg font-light leading-relaxed max-w-md mb-8">
+            Clear concepts and notes for every Arts subject from day one.
+          </p>
+        </div>
+
+        <div class="relative z-10 flex items-end justify-between">
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-palette-cream/30 px-3 py-1.5">English</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-palette-cream/30 px-3 py-1.5">History</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-palette-cream/30 px-3 py-1.5">+5</span>
           </div>
-          <div class="md:col-span-4">
-            <p class="row-desc text-ink/65 font-light leading-relaxed">Clear concepts and notes for every Arts subject from day one.</p>
-          </div>
-          <div class="md:col-span-1 hidden md:flex justify-end">
-            <svg class="row-arrow w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </div>
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.2" d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
       </a>
 
-      <a href="#admissions" class="course-row group block border-b border-ink/15 py-10 lg:py-12 relative">
-        <span class="row-bg"></span>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-          <div class="md:col-span-3 flex items-center gap-6">
-            <span class="font-display text-3xl lg:text-4xl font-light text-ink/30 row-num">12</span>
-            <span class="text-ink/50 text-[0.6rem] tracking-[0.32em] uppercase row-meta">Class 12 Arts</span>
+      <!-- ========== BOX 4: CLASS 12 ARTS — DEEP NAVY ========== -->
+      <a href="#admissions" class="course-card reveal bg-ink text-paper p-8 lg:p-12 min-h-[420px] lg:min-h-[520px] flex flex-col justify-between" style="transition-delay: 300ms;">
+        <span class="corner-mark border-t border-l border-gold/60 top-4 left-4"></span>
+        <span class="corner-mark border-t border-r border-gold/60 top-4 right-4"></span>
+        <span class="corner-mark border-b border-l border-gold/60 bottom-4 left-4"></span>
+        <span class="corner-mark border-b border-r border-gold/60 bottom-4 right-4"></span>
+        <span class="big-num text-gold left-4 bottom-0 text-[10rem] lg:text-[14rem]">12</span>
+
+        <div class="relative z-10">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="w-8 h-px bg-gold/60"></span>
+            <span class="text-[0.62rem] tracking-[0.35em] uppercase font-medium text-gold">Class 12 Arts</span>
           </div>
-          <div class="md:col-span-4">
-            <h3 class="row-title font-display text-2xl lg:text-3xl font-light text-ink mb-2">Board Year, Arts</h3>
-            <p class="row-meta text-ink/50 text-[0.65rem] tracking-[0.3em] uppercase">English / History / +5</p>
+          <h3 class="text-4xl lg:text-5xl font-light leading-[1.05] mb-6">
+            Board Year,<br>
+            <span class="italic font-normal text-gold">Arts.</span>
+          </h3>
+          <p class="text-paper/70 text-lg font-light leading-relaxed max-w-md mb-8">
+            Board-pattern tests, past papers and answer-writing practice.
+          </p>
+        </div>
+
+        <div class="relative z-10 flex items-end justify-between">
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-gold/40 text-gold/90 px-3 py-1.5">English</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-gold/40 text-gold/90 px-3 py-1.5">History</span>
+            <span class="text-[0.6rem] tracking-[0.25em] uppercase border border-gold/40 text-gold/90 px-3 py-1.5">+5</span>
           </div>
-          <div class="md:col-span-4">
-            <p class="row-desc text-ink/65 font-light leading-relaxed">Board-pattern tests, past papers and answer-writing practice.</p>
-          </div>
-          <div class="md:col-span-1 hidden md:flex justify-end">
-            <svg class="row-arrow w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.5" d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </div>
+          <svg class="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-width="1.2" d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
       </a>
+
     </div>
   </div>
 </section>
@@ -542,31 +583,31 @@ tailwind.config = {
       <span class="text-ink/60 text-[0.68rem] tracking-[0.35em] uppercase">The three words</span>
     </div>
 
-    <h2 class="reveal font-display text-ink font-light text-[3rem] sm:text-[5rem] lg:text-[7rem] leading-[0.95] tracking-[-0.03em] mb-10">
-      Focus. <em class="text-gold-gradient not-italic">Prepare.</em> <span class="text-ink/40">Achieve.</span>
+    <h2 class="reveal text-ink font-light text-[3rem] sm:text-[5rem] lg:text-[7rem] leading-[0.95] tracking-[-0.03em] mb-10">
+      Focus. <em class="text-gold-gradient not-italic font-normal">Prepare.</em> <span class="text-ink/40">Achieve.</span>
     </h2>
     <p class="reveal text-ink/60 text-lg lg:text-xl font-light max-w-2xl mb-24 lg:mb-32">The three words on our logo are how every class is run.</p>
 
     <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
       <div class="reveal">
         <div class="border-t border-ink/20 pt-8 mb-6">
-          <span class="font-display text-gold text-4xl lg:text-5xl font-light">01</span>
+          <span class="text-gold-deep text-4xl lg:text-5xl font-light">01</span>
         </div>
-        <h3 class="font-display text-ink text-3xl lg:text-4xl font-light mb-4">Focus</h3>
+        <h3 class="text-ink text-3xl lg:text-4xl font-light mb-4">Focus</h3>
         <p class="text-ink/70 font-light leading-relaxed text-lg">Small, disciplined batches with fixed timings, so every student gets attention and no one falls behind.</p>
       </div>
       <div class="reveal" style="transition-delay: 120ms;">
         <div class="border-t border-ink/20 pt-8 mb-6">
-          <span class="font-display text-gold text-4xl lg:text-5xl font-light">02</span>
+          <span class="text-gold-deep text-4xl lg:text-5xl font-light">02</span>
         </div>
-        <h3 class="font-display text-ink text-3xl lg:text-4xl font-light mb-4">Prepare</h3>
+        <h3 class="text-ink text-3xl lg:text-4xl font-light mb-4">Prepare</h3>
         <p class="text-ink/70 font-light leading-relaxed text-lg">Chapter-wise teaching, notes, and regular tests that build real understanding, not rote learning.</p>
       </div>
       <div class="reveal" style="transition-delay: 240ms;">
         <div class="border-t border-ink/20 pt-8 mb-6">
-          <span class="font-display text-gold text-4xl lg:text-5xl font-light">03</span>
+          <span class="text-gold-deep text-4xl lg:text-5xl font-light">03</span>
         </div>
-        <h3 class="font-display text-ink text-3xl lg:text-4xl font-light mb-4">Achieve</h3>
+        <h3 class="text-ink text-3xl lg:text-4xl font-light mb-4">Achieve</h3>
         <p class="text-ink/70 font-light leading-relaxed text-lg">Timely revision, answer-writing practice and parent updates, so students walk into exams confident.</p>
       </div>
     </div>
@@ -575,7 +616,7 @@ tailwind.config = {
 
 <!-- ========== CONTACT / VISIT US ========== -->
 <section id="contact" class="bg-mesh text-paper py-24 lg:py-40 relative overflow-hidden grain">
-  <div class="absolute -left-20 top-1/4 text-[35vw] font-display font-light leading-none text-outline opacity-30 select-none" aria-hidden="true">99</div>
+  <div class="absolute -left-20 top-1/4 text-[35vw] font-black leading-none text-outline opacity-30 select-none" aria-hidden="true">99</div>
 
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
     <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
@@ -584,19 +625,19 @@ tailwind.config = {
           <span class="w-12 h-px bg-gold/60"></span>
           <span class="text-gold/80 text-[0.68rem] tracking-[0.35em] uppercase">Visit us</span>
         </div>
-        <h2 class="reveal font-display text-paper font-light text-[2.5rem] sm:text-[3.5rem] lg:text-[4.75rem] leading-[1.02] tracking-[-0.02em] mb-10">
-          Near General Bus Stand, <em class="text-gold-gradient not-italic">Parimpora, Srinagar.</em>
+        <h2 class="reveal text-paper font-light text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem] leading-[1.05] tracking-[-0.02em] mb-10">
+          Near General Bus Stand, <em class="text-gold-gradient not-italic font-normal">Parimpora, Srinagar.</em>
         </h2>
         <p class="reveal text-paper/70 text-lg lg:text-xl font-light leading-relaxed max-w-xl mb-12">Easy to reach from every part of the city.</p>
 
         <div class="reveal grid sm:grid-cols-2 gap-10 border-t border-paper/15 pt-10">
           <div>
             <p class="text-gold/70 text-[0.62rem] tracking-[0.35em] uppercase mb-3">WhatsApp</p>
-            <a href="https://wa.me/919186190332?text=Hello%20Mission%2099%2C%20I%20want%20to%20inquire%20about%20admissions" target="_blank" rel="noopener" class="text-paper font-display text-2xl font-light link-underline">+91 91861 90332</a>
+            <a href="https://wa.me/919186190332?text=Hello%20Mission%2099%2C%20I%20want%20to%20inquire%20about%20admissions" target="_blank" rel="noopener" class="text-paper text-2xl font-light link-underline">+91 91861 90332</a>
           </div>
           <div>
             <p class="text-gold/70 text-[0.62rem] tracking-[0.35em] uppercase mb-3">On the map</p>
-            <a href="https://maps.app.goo.gl/QwJfC9DDgWj7gCSj6" target="_blank" rel="noopener" class="text-paper font-display text-2xl font-light link-underline">Open in Google Maps</a>
+            <a href="https://maps.app.goo.gl/QwJfC9DDgWj7gCSj6" target="_blank" rel="noopener" class="text-paper text-2xl font-light link-underline">Open in Google Maps</a>
           </div>
         </div>
       </div>
@@ -614,7 +655,7 @@ tailwind.config = {
 
 <!-- ========== ADMISSIONS / CTA ========== -->
 <section id="admissions" class="bg-gold text-ink py-24 lg:py-40 relative overflow-hidden">
-  <div class="absolute right-0 top-0 text-[45vw] font-display font-light leading-none text-outline-light opacity-40 -translate-y-1/4 select-none" aria-hidden="true">99</div>
+  <div class="absolute right-0 top-0 text-[45vw] font-black leading-none text-outline-light opacity-40 -translate-y-1/4 select-none" aria-hidden="true">99</div>
 
   <div class="max-w-[1400px] mx-auto px-6 lg:px-10 relative z-10">
     <div class="flex items-center gap-4 mb-8 reveal">
@@ -622,8 +663,8 @@ tailwind.config = {
       <span class="text-ink/70 text-[0.68rem] tracking-[0.35em] uppercase">Admissions · 2026–27</span>
     </div>
 
-    <h2 class="reveal font-display text-ink font-light text-[3rem] sm:text-[5rem] lg:text-[7.5rem] leading-[0.95] tracking-[-0.03em] max-w-5xl mb-12">
-      Start your <em class="not-italic">mission</em> today.
+    <h2 class="reveal text-ink font-light text-[3rem] sm:text-[5rem] lg:text-[7.5rem] leading-[0.95] tracking-[-0.03em] max-w-5xl mb-12">
+      Start your <em class="not-italic font-normal">mission</em> today.
     </h2>
 
     <div class="reveal grid lg:grid-cols-12 gap-10 items-end" style="transition-delay: 200ms;">
@@ -631,8 +672,8 @@ tailwind.config = {
         Fill a short form and our coordinator will call you back to guide you through admission.
       </p>
       <div class="lg:col-span-6 lg:col-start-8 flex flex-col sm:flex-row gap-6">
-        <a href="https://wa.me/919186190332?text=Hello%20Mission%2099%2C%20I%20want%20to%20apply%20for%20admission" target="_blank" rel="noopener" class="bg-ink text-paper px-8 py-4 text-[0.7rem] font-bold tracking-[0.28em] uppercase hover:bg-violet transition-colors text-center">Apply on WhatsApp</a>
-        <a href="tel:+919186190332" class="border border-ink/30 text-ink px-8 py-4 text-[0.7rem] font-bold tracking-[0.28em] uppercase hover:bg-ink hover:text-paper transition-colors text-center">Call +91 91861 90332</a>
+        <a href="https://wa.me/919186190332?text=Hello%20Mission%2099%2C%20I%20want%20to%20apply%20for%20admission" target="_blank" rel="noopener" class="bg-ink text-paper px-8 py-4 text-[0.72rem] font-medium tracking-[0.26em] uppercase hover:bg-violet transition-colors text-center">Apply on WhatsApp</a>
+        <a href="tel:+919186190332" class="border border-ink/30 text-ink px-8 py-4 text-[0.72rem] font-medium tracking-[0.26em] uppercase hover:bg-ink hover:text-paper transition-colors text-center">Call +91 91861 90332</a>
       </div>
     </div>
   </div>
@@ -645,7 +686,7 @@ tailwind.config = {
       <div>
         <div class="flex items-center gap-3 mb-4">
           <img src="https://raw.githubusercontent.com/Wasiq-Andrabi/MISSION-99/main/file_00000000ec64820b87c8ab099b158257.png" alt="Mission 99 logo" width="36" height="36" class="h-9 w-9 object-contain">
-          <span class="font-display text-paper text-lg">Mission 99</span>
+          <span class="text-paper text-lg">Mission 99</span>
         </div>
         <p class="text-paper/50 text-sm font-light leading-relaxed">Focus. Prepare. Achieve.</p>
       </div>
@@ -684,14 +725,13 @@ tailwind.config = {
   </a>
 </div>
 
-<!-- ========== JAVASCRIPT (THE MISSING PIECE) ========== -->
+<!-- ========== JAVASCRIPT ========== -->
 <script>
 (function () {
-  // 1. Year in footer
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 
-  // 2. Scroll reveal
+  // Scroll reveal
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -704,11 +744,10 @@ tailwind.config = {
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     reveals.forEach(function (el) { io.observe(el); });
   } else {
-    // Fallback: show all if IO unsupported
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // 3. Mobile menu toggle
+  // Mobile menu
   var toggle = document.getElementById('menu-toggle');
   var overlay = document.getElementById('menu-overlay');
   var menuLinks = document.querySelectorAll('.menu-link');
@@ -720,7 +759,6 @@ tailwind.config = {
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.style.overflow = open ? 'hidden' : '';
-    // reset scroll position of overlay when opening
     if (open) overlay.scrollTop = 0;
   }
 
@@ -734,7 +772,6 @@ tailwind.config = {
     });
   }
 
-  // 4. Close menu on resize to desktop
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 1024 && isOpen) setMenu(false);
   });
